@@ -12,14 +12,14 @@ if (args.length < 2) {
   process.exit();
 }
 
+
+let total = 0;
+
 // going through each argument
 // for loop
 // forEach
 // for (let i=0; i<args.length;i++)
 // for of
-
-let total = 0;
-
 for (let arg of args) {
   // add them up
   // edge case: If any argument is not a whole number, skip it.
