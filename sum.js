@@ -12,7 +12,6 @@ if (args.length < 2) {
   process.exit();
 }
 
-
 let total = 0;
 
 // going through each argument
@@ -31,12 +30,12 @@ for (let arg of args) {
     total += convertedNum;
   }
   console.log('args:', arg, 'total:', total);
+  // edge case: If any argument is not a number, output an error message.
+  if (isNaN(convertedNum)) {
+    console.log('Error: please enter only numbers');
+    process.exit();
+  }
 }
-// edge case: If any argument is not a number, output an error message.
-if (isNaN(convertedNum)) {
-  console.log('Error: please enter only numbers');
-  process.exit();
-} 
 
 // print the sum of them
 console.log('Total:', total);
